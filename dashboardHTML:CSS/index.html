@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Luccro Grid Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet">
+        <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="grid-container">
+                <div class="menu-icon">
+                        <i class="far fa-bars header__menu"></i>
+                      </div>
+            <header class="header">
+                <div class="header__logo">Logo</div>
+                <div style = "flex-direction: row; display: flex">
+                    <div class="header__avatar">Profile</div>
+                    <div style = "background-color: #21A179; width: 20px; margin-left: 16px; margin-right: 16px">en</div>
+                    <div>中文</div>
+                </div>
+            </header>
+            <aside class="sidenav">
+                <div class="sidenav__close-icon">
+                    <i class="fas fa-times sidenav__brand-close"></i>
+                    <div>Close</div>
+                </div>
+                <ul class="sidenav__list">
+                    <li class="sidenav__list-item">Signals</li>
+                    <li class="sidenav__list-item">Sentiments</li>
+                    <li class="sidenav__list-item">Visualizations</li>
+                    <li class="sidenav__list-item">Charting</li>
+                    <li class="sidenav__list-item">Strength</li>
+                </ul>
+            </aside>
+            <main class="main">
+                <style>
+                    .main-header {
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 20px;
+                        padding: 20px;
+                        height: 400px;
+                        background-color: #e3e4e6;
+                        color: slategray;
+                    }
+                    .main-overview {
+                          display: grid;
+                          grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+                          grid-auto-rows: 94px;
+                          grid-gap: 20px;
+                          margin: 20px;
+                        }
+                        
+                        .overviewcard {
+                          display: flex;
+                          align-items: center;
+                          justify-content: space-between;
+                          padding: 20px;
+                          background-color: #d3d3;
+                        }
+                </style>        
+                <div class="main-header">
+                    <div class="main-header__heading">Primary</div>
+                    <div class="main-header__updates">Image</div>
+                </div>
+                      <div class="main-overview">
+                        <div class="overviewcard">
+                          <div class="overviewcard__icon">Secondary</div>
+                          <div class="overviewcard__info">Image</div>
+                        </div>
+                        <div class="overviewcard">
+                          <div class="overviewcard__icon">Secondary</div>
+                          <div class="overviewcard__info">Image</div>
+                        </div>
+                        <div class="overviewcard">
+                          <div class="overviewcard__icon">Secondary</div>
+                          <div class="overviewcard__info">Image</div>
+                        </div>
+                        <div class="overviewcard">
+                          <div class="overviewcard__icon">Secondary</div>
+                          <div class="overviewcard__info">Image</div>
+                        </div>
+                      </div>
+                <div>
+            </div>           
+            </main>
+            <footer class="footer">
+                <div class = "footer-copyright">
+                    <p>Copyrights 2020  |  Luccro</p>
+                </div>
+                <div class="footer-signature">True Meridian</div>
+            </footer>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+        const menuIconEl = $('.menu-icon');
+        const sidenavEl = $('.sidenav');
+        const sidenavCloseEl = $('.sidenav__close-icon');
+
+// Add and remove provided class names
+            function toggleClassName(el, className) {
+                if (el.hasClass(className)) {
+                    el.removeClass(className);
+                } else {
+                    el.addClass(className);
+                }
+            }
+
+            // Open the side nav on click
+            menuIconEl.on('click', function() {
+            toggleClassName(sidenavEl, 'active');
+            });
+
+            // Close the side nav on click
+            sidenavCloseEl.on('click', function() {
+            toggleClassName(sidenavEl, 'active');
+            });
+        </script>
+    </body>
+</html>
